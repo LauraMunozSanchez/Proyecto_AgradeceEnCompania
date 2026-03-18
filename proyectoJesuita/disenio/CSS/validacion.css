@@ -1,0 +1,71 @@
+:root{
+    --naranja: #F29325;
+    --naranjaHover: #eb790f;
+    --verde: #007172;
+}
+
+@keyframes latido {
+    from { transform: scale(1); }
+    to { transform: scale(1.1); }
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    text-align: center;
+}
+
+main {
+    margin-top: 150px;
+}
+
+.tarjeta {
+    background: white;
+    display: inline-block;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    animation: aparecer 0.8s ease;
+}
+
+.check {
+    font-size: 60px;
+    color: #4CAF50;
+    margin-bottom: 20px;
+    animation: latido 1s infinite alternate;
+}
+
+h1 {
+    margin-bottom: 10px;
+}
+
+p {
+    margin-bottom: 25px;
+}
+
+a {
+    text-decoration: none;
+    background: var(--naranja);
+    color: white;
+    padding: 12px 25px;
+    border-radius: 10px;
+    font-weight: bold;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+a:hover {
+    background: var(--naranjaHover);
+    transform: scale(1.05);
+}
