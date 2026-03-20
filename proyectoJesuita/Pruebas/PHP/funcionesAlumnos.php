@@ -8,7 +8,9 @@
     
     function mostraralumnos(){ 
 	    $conexion=conectar();  
-	    $sql="SELECT * FROM alumnos"; // SELECT * FROM alumnos LIMIT 3 -> te devuelve las 3 primeras filas - CORREGIR CONSULTA TRAYENDO SOLO LAS DOS COLUMNAS
+	    // No es lo que pedia : $sql="SELECT * FROM alumnos"; // SELECT * FROM alumnos LIMIT 3 -> te devuelve las 3 primeras filas - CORREGIR CONSULTA TRAYENDO SOLO LAS DOS COLUMNAS
+		$sql = "SELECT nombre, IDAlumno FROM clientes";
+		
 	    $resultado=$conexion->query($sql);
     
 	    for ($i=0; $i<3; $i++){
