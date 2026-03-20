@@ -8,8 +8,8 @@
     
     function mostraralumnos(){ 
 	    $conexion=conectar();  
-	    $sql="SELECT * FROM alumnos";
-	    $resultado=$conexion->query($sql);	
+	    $sql="SELECT * FROM alumnos"; // SELECT * FROM alumnos LIMIT 3 -> te devuelve las 3 primeras filas
+	    $resultado=$conexion->query($sql);
     
 	    for ($i=0; $i<3; $i++){
 	        $fila=$resultado->fetch_array();
