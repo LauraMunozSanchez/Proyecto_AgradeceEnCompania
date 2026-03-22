@@ -1,15 +1,4 @@
 <!-- CREAR AGRADECIMIENTOS -->
-
-<?php
-    $companeros = [
-        0 => "Laura",
-        1 => "Pablo",
-        2 => "Lorena",
-        3 => "Raul",
-        4 => "Marisa"
-    ];
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -41,15 +30,10 @@
                 <label>Este agradecimiento es para:</label>
                 <select name="nombres" id="nombres">
                     <option value="" disabled selected>--Selecciona a un compañero--</option>
-                        <?php
-                            $i = 0;
-                            $total = count($companeros);
-                            while ($i < $total) {
-                                echo '<option value="' . $i . '">' . $companeros[$i] . '</option>';
-                                $i++;
-                            }
-                        ?>
-
+                    <?php
+                        require("funcionesAlumnos.php");
+                        mostraralumnos();
+                    ?>
                 </select>
             </div>
             
