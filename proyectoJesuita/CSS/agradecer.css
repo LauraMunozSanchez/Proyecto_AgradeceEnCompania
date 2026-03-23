@@ -1,5 +1,8 @@
-/* FALTA POR PONER:
-    - COLORES A LOS ENLACES */
+/* IMPORTANTE:
+   box-sizing: border-box hace que:
+   width y height INCLUYAN padding + border
+   (no hay que sumarlos manualmente al tamaño final)
+*/
 
 /* FUENTES */
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Quicksand:wght@300..700&display=swap');
@@ -51,6 +54,10 @@ header{
     width: 100%;
     height: 200px;
 }
+/* CÁLCULO:
+   width total = 100% 
+   height total = 200px 
+*/
 
 header img{
     display: inline-block;
@@ -58,6 +65,10 @@ header img{
     margin-left: 100px;
     vertical-align: middle;
 }
+/* CÁLCULO:
+       ancho total = 450px + 100px (margin-left)
+       = 550px
+*/
 
 header h1{
     display: inline-block;
@@ -73,6 +84,11 @@ header h1{
     font-family: 'Oswald';
     line-height: 1;
 }
+/* CÁLCULO:
+   width = 20% del contenedor padre (header)
+   height = 100px (incluye contenido + padding + border)
+   espacio horizontal total = 20% + 150px margin
+*/
 
 header span{
     color: var(--blanco);
@@ -91,6 +107,9 @@ nav{
 
     position: relative; /* Para colocar el logo en la esquina izquierda */
 }
+/* CÁLCULO:
+   height total = 75px 
+*/
 
 nav ul {
     list-style-type: none;
@@ -112,6 +131,11 @@ nav a{
 
     padding: 10px 20px 10px 20px; /*top right bottom left*/
 }
+/* CÁLCULO:
+    altura total del enlace = contenido + 10px top + 10px bottom
+     
+    ancho total = contenido + 20px left + 20px right
+*/
 
 nav a:hover{
     background-color: var(--naranjaHover);
@@ -182,6 +206,15 @@ main{
     border-bottom: solid var(--blanco) 5px;
     box-shadow: -30px 25px 7px var(--blancoBase); /* desplazamiento horizontal, desplazamiento vertical, radio de desenfoque, color */
 }
+/* CÁLCULO:
+   width = 45% del body
+   height total = 600px 
+
+   margin:
+   top = 30px
+   bottom = 30px
+   left/right = auto 
+*/
 
 main h3{
     margin: 30px auto 20px auto; /*top right bottom left*/
@@ -196,6 +229,10 @@ form{
     height: 500px;
     font-family:'Quicksand';
 }
+/* CÁLCULO:
+   width = 80% del main
+   height total = 500px
+*/
 
 form label{
     display: block;
@@ -214,6 +251,13 @@ textarea{
     color: #007172;
     font-style: italic;
 }
+/* CÁLCULO:
+   width total = 100% del contenedor
+   height total = 200px
+   contenido interno real:
+   height = 200px - padding - border
+   = 200 - 20px padding - 6px border = 174px
+*/
 
 textarea::placeholder{
     color: var(--VerdosoClaroPlaceholder);
@@ -228,6 +272,11 @@ select{
     font-size: 20px;
     color:#007172;
 }
+/* CÁLCULO:
+   height total = 50px
+   contenido interno:
+   = 50 - 20px padding - 6px border = 24px útiles
+*/
 
 button{
     display: block;
@@ -241,6 +290,12 @@ button{
     border-radius: 10px;
     font-family: 'Quicksand';
 }
+/* CÁLCULO:
+    width total = 300px
+    height total = 50px
+    en hover:
+    border-bottom: 5px sigue dentro del height (no crece)
+ */
 
 button:hover{
     background-color: var(--naranjaHover);

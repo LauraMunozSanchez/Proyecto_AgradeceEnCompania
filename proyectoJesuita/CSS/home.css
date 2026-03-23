@@ -42,7 +42,7 @@
 }
 
 body{
-    overflow: hidden; /* Evita que aparezcan barras de desplazamiento */
+
     background-color: var(--VerdosoClaroPlaceholder);
 }
 
