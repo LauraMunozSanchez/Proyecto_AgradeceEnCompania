@@ -1,10 +1,8 @@
 <!-- CREAR AGRADECIMIENTOS -->
 <?php
-    define("SERVIDOR",'localhost');
-    define("USUARIO",'root');
-    define("PASSWORD",'');
-    define("BBDD",'agradeceencompania');
-    
+
+    require 'configdb.php';
+
     function conectar(){
 	    $conexion = new mysqli(SERVIDOR, USUARIO, PASSWORD, BBDD);
 	    $conexion->set_charset("utf8"); 
