@@ -1,0 +1,34 @@
+DISEÑO WEB
+LOGO:
+    - el simbolo de la gratitud
+    - manos sosteniendo el simbolo
+    --------------------------------
+    - Unas manos agarrando un corazon / compañeros
+
+Página inicio de sesión:
+    - No tiene nav (obv)
+    - Nos lo da ISA
+
+Portada:
+    -   
+    
+Página Agradecer:
+    - Cabecera
+    - Nav
+    - Texto / imagen
+    - Para [Desplegable]
+    - Agradecimiento: [Mensaje de Agradecimiento]
+    - Footer
+
+Mis agradecimientos:
+    - Cabecera
+    - Nav
+    - Tarjetas
+
+
+BBDD
+Información:
+    -Alumnos:
+        *Iniciar sesión: Correo y contraseña - Servidor de correo
+        *Jesuitas: nombre, imagen, Información/descripción
+        *Agradecimientos: mensaje, destinatario

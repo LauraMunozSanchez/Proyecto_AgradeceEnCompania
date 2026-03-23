@@ -1,0 +1,18 @@
+						
+alumnos						
+Nombre	Tipo	Tamaño	Nulo	Índices	default, check, contador ....	Descripción
+idAlumno	char	2	not null	PK		Este id sera el número de puesto de cada alumno.
+password	varchar	255	not null			
+nombre	varchar	100	not null			
+webAlumno	varchar	100	not null			El nombre de la página de cada alumno
+jesuita	varchar	100	not null			
+imagen	varchar	255	not null			
+informacion	varchar	150	not null			Frase o actuación del Jesuita por lo que haya destacado
+						
+agradecimientos						
+Nombre	Tipo	Tamaño	Nulo	Índices	default,check	Descripción
+idAgradecimiento	smallint		not null	PK	auto_increment	
+mensaje	mediumText		not null			
+FK(idEmisor) a alumnos(idAlumno)						
+FK(idReceptor) a alumnos(idAlumno)						
+CSU(idEmisor,idReceptor)					CHECK(idEmisor <> idReceptor)	

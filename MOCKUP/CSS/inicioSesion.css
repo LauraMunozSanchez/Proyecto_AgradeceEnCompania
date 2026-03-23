@@ -1,0 +1,117 @@
+/* FUENTES */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Quicksand:wght@300..700&display=swap');
+
+/* VARIABLES COLORES */
+:root{
+    --blanco: #ffffff;
+    --blancoBase: #F4E2DE;
+    --Claro: rgb(247, 243, 242);
+    --naranja: #F29325;
+    --naranjaSelec: #fcc653;
+    --naranjaHover: #eb790f;
+    --naranjaOscuro: #D94F04;
+    --VerdosoClaro:#007172;
+    --VerdosoClaroPlaceholder:#65a2a3;
+    --VerdosoOscuro:#025259;
+}
+
+/*ANIMACIONES*/
+@keyframes levitar{
+    from{
+        transform: translateY(0);
+    }
+    to{
+        transform: translateY(-5px);
+    }
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Oswald';
+    background-image: url(../img/iniciosesionBACK.jpg); 
+    background-size: 100%;
+    user-select: none;
+}
+
+main {
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    border: solid var(--VerdosoOscuro) 7px;
+    width: 25%;
+    height: 600px;
+    margin: 200px auto 0 auto; /*top right bottom left*/
+}
+
+form{
+    margin: 30px auto 20px auto; /*top right bottom left*/
+    width: 80%;
+    height: 500px;
+}
+
+.cabecera{
+    text-align: center;
+}
+
+.cabecera h1 {
+    color: var(--VerdosoOscuro);
+    -webkit-text-stroke: 0.5px var(--blanco);
+    font-size: 35px;
+    margin: 20px 0 10px 0;
+    
+}
+
+.cabecera p {
+    color: var(--VerdosoOscuro);
+    font-size: 20px;
+    font-style: italic;
+    animation: levitar 2s ease-in-out infinite alternate;
+}
+
+.usuarioYcontraseña {
+    margin-bottom: 20px;
+}
+
+label {
+    color: var(--VerdosoOscuro);
+    font-size: 25px;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid var(--VerdosoClaro);
+    border-radius: 5px;
+    font-size: 14px;
+    font-family: 'Quicksand';
+    color: var(--naranjaOscuro);
+    font-weight: bold;
+}
+
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--VerdosoClaro);
+    color: var(--blanco);
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 100px;
+}
+
+button:hover {
+    background-color: var(--VerdosoOscuro);
+    color: var(--naranja);
+    font-weight: bold;
+    border-bottom: solid var(--naranja) 5px;
+}
