@@ -5,7 +5,24 @@
 	    $conexion = new mysqli(SERVIDOR, USUARIO, PASSWORD, BBDD);
 	    $conexion->set_charset("utf8"); 
         return $conexion;
+    }
+     function mostraralumnos(){ 
+	    $conexion=conectar();  
+	    // No es lo que pedia : $sql="SELECT * FROM alumnos"; // SELECT * FROM alumnos LIMIT 3 -> te devuelve las 3 primeras filas - CORREGIR CONSULTA TRAYENDO SOLO LAS DOS COLUMNAS
+		$sql = "SELECT nombre, IDAlumno FROM alumnos";
+		
+	    $totalFilas = $resultado->num_rows; // Obtener el número total de filas en el resultado
+		$fila = $resultado->fetch_array(); // Obtener la primera fila del resultado
+		while ($fila) { // Iterar mientras haya filas disponibles
+	        echo '<p>';
+	        echo 'Nombre alumno: '.$fila["nombre"];
+			echo 'Número de puesto: '.$fila["IDAlumno"];
+	        echo '</p>';
+			$fila = $resultado->fetch_array(); // Obtener la siguiente fila
+		}
+     }
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -38,17 +55,7 @@
                 <select name="nombres" id="nombres">
                     <option value="" disabled selected>--Selecciona a un compañero--</option>
                     <?php
-                        $conexion=conectar();  
-	                    $sql = "SELECT nombre, IDAlumno FROM alumnos";
-	                    $resultado=$conexion->query($sql);
-		                $totalFilas = $resultado->num_rows; // Obtener el número total de filas en el resultado
-		                $fila = $resultado->fetch_array(); // Obtener la primera fila del resultado
-		                while ($fila) { // Iterar mientras haya filas disponibles
-		                	echo '<option value="' . $fila["IDAlumno"] . '">' . $fila["nombre"] . '</option>';
-		                	$fila = $resultado->fetch_array(); // Obtener la siguiente fila
-                        }
-		                $conexion->close(); // Cerrar la conexión después de usarla
-		                return $totalFilas; // Devolver el número total de filas pasadas por el resultado
+                        mostraralumnos();
                     ?>
                 </select>
             </div>
