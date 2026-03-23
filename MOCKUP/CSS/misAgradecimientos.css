@@ -200,3 +200,25 @@ main a{
 main a:hover{
     color: #eb790f;
 }
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #f2f2f24b;
+    /*footer siempre en la parte inferior  */
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer img {
+    width: 100px;
+    display: block;
+    margin: 0 auto;
+}
+
+footer p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #555;
+}
