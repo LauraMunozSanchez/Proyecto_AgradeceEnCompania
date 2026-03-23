@@ -25,7 +25,7 @@
     </nav>
     <main>
         <h3> Hola, Daniela</h3>
-        <form action = "" method="POST">
+        <form action = "recoger.php" method="POST">
             <div>
                 <label>Este agradecimiento es para:</label>
                 <select name="nombres" id="nombres">
