@@ -23,5 +23,6 @@ CREATE TABLE agradecimientos (
     -- Restricción para evitar que un alumno se agradezca a sí mismo
     CONSTRAINT CHK_AGRADECIMIENTOS_NO_AUTOGRACIAS CHECK (idEmisor <> idReceptor),
     -- Clave única compueesta por idEmisor e idReceptor para evitar que un alumno agradezca mas de una vez a otro alumno
-    CONSTRAINT UQ_AGRADECIMIENTOS_UNICOS UNIQUE (idEmisor, idReceptor)
+    CONSTRAINT UQ_AGRADECIMIENTOS_UNICOS UNIQUE (idEmisor, idReceptor) -- hacerlo con create INDEX
+    
 );
