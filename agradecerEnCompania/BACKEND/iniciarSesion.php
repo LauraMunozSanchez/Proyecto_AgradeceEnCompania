@@ -4,9 +4,13 @@
     // Crea una sesión o reanuda la existente basada en el identificador enviado por el navegador
     // En este caso crea una nueva
     session_start();
-    require 'configdb.php';
-    $usuario = $_POST['nombre'];
-    $pw = $_POST['clave'];
+    require 'funcionesAlumnos.php';
+
+    $conexion = conectar();
+
+    // Datos del formulario
+    $usuario = $_POST['usuario']; // name de los input
+    $pw = $_POST['password'];
 
     // Comprobar si el nombre y la contraseña existe
     $sql = "SELECT * FROM alumnos WHERE nombre='$usuario' AND clave='$pw';";
@@ -20,10 +24,18 @@
     if($resultado->num_rows > 0){
         // Extrae una fila del resultado y lo guarda en la variable fila
         $fila = $resultado->fetch_array();
+
+        // En la variable _SESSION se guardan el nombre y la clave
         $_SESSION['usuario'] = $fila['nombre'];
-        $_SESSION['clave'] = $fila['clave'];
-        header(Location: ../VIEWS/inicioSesion.html);
-        
+        $_SESSION['password'] = $fila['clave'];
+        // Te redireccion al home (o a donde le digas)
+        header(Location: ../VIEWS/home.html);
+        // Tras la dirección para evitar que el php se siga ejecutando lo detenemos
+        exit();
+    }
+    else {
+        echo "ERROR, los datos de inicio no coinciden";
     }
     
+    $conexion->close();
 ?>
