@@ -18,11 +18,11 @@ CREATE TABLE agradecimientos (
     -- PK
     CONSTRAINT PK_AGRADECIMIENTOS PRIMARY KEY (idAgradecimiento),
     -- FK
-    CONSTRAINT FK_AGRADECIMIENTOS_EMISOR FOREIGN KEY (idEmisor) REFERENCES ALUMNOS(idAlumno) ON DELETE CASCADE,
-    CONSTRAINT FK_AGRADECIMIENTOS_RECEPTOR FOREIGN KEY (idReceptor) REFERENCES ALUMNOS(idAlumno) ON DELETE CASCADE,
+    CONSTRAINT FK_AGRADECIMIENTOS_EMISOR FOREIGN KEY (idEmisor) REFERENCES alumnos(idAlumno) ON DELETE CASCADE,
+    CONSTRAINT FK_AGRADECIMIENTOS_RECEPTOR FOREIGN KEY (idReceptor) REFERENCES alumnos(idAlumno) ON DELETE CASCADE,
     -- Restricción para evitar que un alumno se agradezca a sí mismo
-    CONSTRAINT CHK_AGRADECIMIENTOS_NO_AUTOGRACIAS CHECK (idEmisor <> idReceptor),
-    -- Clave única compueesta por idEmisor e idReceptor para evitar que un alumno agradezca mas de una vez a otro alumno
-    CONSTRAINT UQ_AGRADECIMIENTOS_UNICOS UNIQUE (idEmisor, idReceptor) -- hacerlo con create INDEX
-    
+    CONSTRAINT CHK_AGRADECIMIENTOS_NO_AUTOGRACIAS CHECK (idEmisor <> idReceptor)
 );
+
+-- Clave única compueesta por idEmisor e idReceptor para evitar que un alumno agradezca mas de una vez a otro alumno
+CREATE UNIQUE INDEX idx_emisor_receptor ON agradecimientos (idEmisor, idReceptor);

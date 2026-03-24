@@ -1,4 +1,4 @@
-INSERT INTO ALUMNOS (idAlumno, clave, nombre, webAlumno, jesuita, imagen, informacion) VALUES
+INSERT INTO alumnos (idAlumno, clave, nombre, webAlumno, jesuita, imagen, informacion) VALUES
 ('01', 'clave01', 'Manuel Amigo Royan', 'manuel_amigo', 'Ignacio de Loyola', 'img/ignacio.jpg', 'Fundador de la Compañía de Jesús'),
 ('02', 'clave02', 'Samuel Barril Sosa', 'samuel_barril', 'Francisco Javier', 'img/javier.jpg', 'Misionero clave en Asia'),
 ('03', 'clave03', 'Yehu Blanco Pinilla', 'yehu_blanco', 'Pedro Arrupe', 'img/arrupe.jpg', 'Renovador de la orden en el siglo XX'),
@@ -22,4 +22,7 @@ INSERT INTO ALUMNOS (idAlumno, clave, nombre, webAlumno, jesuita, imagen, inform
 ('21', 'clave21', 'Ivan Rodriguez Gomez-Landero', 'ivan_rodriguez', 'Ignacio Ellacuría', 'img/ellacuria.jpg', 'Asesinado por defender derechos humanos'),
 ('22', 'clave22', 'Daniel Vega Garcia', 'daniel_vega', 'Jon Sobrino', 'img/sobrino.jpg', 'Teólogo de la liberación'),
 ('23', 'clave23', 'Rubi Villalon Arranz', 'rubi_villalon', 'Vicente Cañas', 'img/canas.jpg', 'Misionero entre indígenas en Brasil'),
-('24', 'clave24', 'Antonio Villareal Moreno', 'antonio_villareal', 'Cristóbal López Romero', 'img/lopez.jpg', 'Cardenal y arzobispo actual');
+('24', 'clave24', 'Antonio Villareal Moreno', 'antonio_villareal', 'Cristóbal López Romero', 'img/lopez.jpg', 'Cardenal y arzobispo actual'),
+('25','clave25','Lucas','Lucas_web','jesuita','img/lucas.jpg','frase25');
+
+    

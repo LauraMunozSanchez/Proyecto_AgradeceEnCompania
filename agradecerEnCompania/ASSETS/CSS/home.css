@@ -154,7 +154,7 @@ nav img{
     display: inline-block;
     width: 20px;
     height: 20px;
-    background-image: url(../img/doorlock.png); 
+    background-image: url(../IMG/doorlock.png); 
     background-size: cover;           
     background-position: center;    
     background-repeat: no-repeat;    
@@ -164,7 +164,7 @@ nav img{
 .puerta:hover{   
     width: 20px;
     height: 20px;
-    background-image: url(../img/opendoor.png); 
+    background-image: url(../IMG/opendoor.png); 
     background-size: cover;           
     background-position: center;    
     background-repeat: no-repeat;    
@@ -179,7 +179,7 @@ main {
     }
 
 .portada{
-    background-image: url(../img/companiaDeJesus.png); 
+    background-image: url(../IMG/companiaDeJesus.png); 
     background-size: cover;
     background-position: center;
     width: 100%;
@@ -277,9 +277,21 @@ article {
     border-radius: 8px;
     margin-top: 15px;
 }
+
 footer {
     text-align: center;
-    color: white;
-    margin-top: 20px;
-    font-size: 0.9em;
+    padding: 20px;
+    background-color: #f2f2f24b;
+}
+
+footer img {
+    width: 100px;
+    display: block;
+    margin: 0 auto;
+}
+
+footer p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #555;
 }
