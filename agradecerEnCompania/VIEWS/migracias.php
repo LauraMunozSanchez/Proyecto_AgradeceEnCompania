@@ -1,0 +1,41 @@
+<!-- CREAR AGRADECIMIENTOS -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Guy Consolmagno">
+    <link rel="stylesheet" href="../ASSETS/CSS/mensaje.css">
+    <title>Mis agradecimientos | Agradece en compañia</title>
+</head>
+<body>
+<main>
+
+    <!-- ASIDE -->
+    <aside >
+        <div class="perfil">
+            <div class="img"></div>
+            <h2>Guy Consolmagno</h2>
+        </div>
+
+        <div class="frase">
+            <p>“Con humildad y asombro ante el universo, demostró que la ciencia y la fe no son enemigas, sino caminos complementarios hacia la verdad, dedicando su vida a inspirar curiosidad, diálogo y comprensión entre culturas y creencias.”</p>
+        </div>
+    </aside>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <section>
+
+        <article class="nombre">
+            <h1>PARA PABLO</h1>
+        </article>
+
+        <article class="mensaje">
+            <p>Gracias por ser mi compañero de vida, por compartir mis alegrías y apoyarme en mis momentos difíciles. Eres mi roca, mi confidente y mi mejor amigo. Te amo con todo mi corazón.</p>
+        </article>
+
+    </section>
+
+</main>
+</body>
+</html>
